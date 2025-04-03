@@ -13,7 +13,7 @@ class BigMacStats:
         self.data = self.data[['name', 'dollar_price']].dropna()
 
     @logging
-    def plot_histogram(self):
+    def histogram(self):
         grouped_data = self.data.groupby('name')['dollar_price'].mean().sort_values()
 
         # Настройка графика
@@ -31,6 +31,6 @@ class BigMacStats:
         plt.tight_layout()
         plt.show()
 
-big_mac_stats = BigMacStats('BigmacPrice.csv')
-big_mac_stats.preprocess_data()
-big_mac_stats.plot_histogram()
+bg = BigMacStats('BigmacPrice.csv')
+bg.preprocess_data()
+bg.histogram()
