@@ -1,9 +1,8 @@
-from log import CAPS
-from log import LOW
+from capsule import BigMacStats
 
 def main():
-    CAPS()
-    LOW()
+    first = BigMacStats()
+    first.plot_histogram()
 
 if __name__ == '__main__': #проверяем на прямой запуск
     main() #запускаем функцию

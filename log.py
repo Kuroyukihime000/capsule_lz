@@ -1,7 +1,6 @@
 import os
 import datetime
 import pandas as pd
-a
 
 user=os.getlogin()
 
@@ -29,11 +28,3 @@ def logging(func):
             df.to_csv('log.csv')
         return result
     return wrapper
-
-@logging
-def CAPS():
-    print('CAPS')
-
-@logging
-def LOW():
-    print('LOW')
